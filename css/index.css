@@ -1,0 +1,30 @@
+:root {
+  --yellow : #ffcf00;
+  --white : #ffffff;
+  --blue-light : #47a2e7;
+  --blue : #005495;
+  --red : #d01012;
+  --orange : #fd8024;
+  --gray : #929292fe;
+  --loaderAnimationTime: 3s;
+  --generalDelatyAnimation: 2.9s;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, .page, .container{
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--white);
+}
+

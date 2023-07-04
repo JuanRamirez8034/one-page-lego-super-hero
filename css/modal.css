@@ -1,0 +1,159 @@
+.modal-hide {
+  display: none !important;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  z-index: 9;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f85;
+  z-index: 9;
+}
+
+.modal__content {
+  grid-column: 2/11;
+  grid-row: 3 / 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  max-width: 50rem;
+  min-height: 10rem;
+  position: relative;
+  background: var(--white);
+}
+
+.modal__content .close {
+  position: absolute;
+  display: block;
+  width: 2rem;
+  aspect-ratio: 1;
+  right: -1rem;
+  top: -1rem;
+  filter: drop-shadow(0 0 1rem var(--white));
+  cursor: pointer;
+}
+
+.modal__content .close:active {
+  transform: scale(0.95);
+}
+
+.modal-slider {
+  width: 80%;
+  height: 100%;
+  max-height: 25rem;
+  max-width: 20rem;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  /* background: red; */
+}
+
+.modal-slider .cards-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-slider input[type='radio'] {
+  display: none;
+}
+
+.cards-slider .card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  background: var(--yellow);
+  display: grid;
+  place-items: center;
+  height: 80%;
+  width: 60%;
+  border-radius: 0.4rem;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  filter: drop-shadow(0 0 1rem #000000a6);
+}
+
+.modal button.button {
+  border: none;
+  outline: none;
+  width: auto;
+  padding: 0.8rem 3rem;
+  margin: 0 auto;
+  position: relative;
+  background: var(--blue-light);
+  box-shadow: 0 0 2px var(--blue-light);
+  cursor: pointer;
+  border-radius: 0.4rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all ease-in 0.1s;
+}
+
+.modal button.button:hover{
+  background: var(--blue);
+  box-shadow: 0 0 2px var(--blue);
+  color: var(--white);
+  transition: all ease-in 0.1s;
+}
+
+.modal button.button:active{
+  transform: scale(0.95);
+  transition: all ease-in 0.1s;
+}
+
+
+#radio-1:checked ~ .cards-slider #card-1,
+#radio-2:checked ~ .cards-slider #card-2,
+#radio-3:checked ~ .cards-slider #card-3 {
+  box-shadow: 0 0 1rem #00000093;
+  transform: translate(0,0) scale(1.1);
+  z-index: 1;
+  opacity: 1;
+}
+
+#radio-1:checked ~ .cards-slider #card-2,
+#radio-2:checked ~ .cards-slider #card-3,
+#radio-3:checked ~ .cards-slider #card-1 {
+  transform: translate(-50%, 1rem) scale(0.9);
+  z-index: 0;
+  opacity: 0.5;
+}
+
+#radio-1:checked ~ .cards-slider #card-3,
+#radio-2:checked ~ .cards-slider #card-1,
+#radio-3:checked ~ .cards-slider #card-2 {
+  transform: translate(50%, 1rem) scale(0.9);
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* 
+.cards-slider .card:nth-child(1) {
+  transform: translate(-50%, 1.5rem) scale(0.9);
+}
+
+.cards-slider .card:nth-child(2) {
+  box-shadow: 0 0 1rem var(--blue);
+  transform:  scale(1.1);
+  z-index: 1;
+}
+
+.cards-slider .card:nth-child(3) {
+  transform: translate(50%, 1.5rem) scale(0.9);
+} */

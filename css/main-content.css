@@ -1,0 +1,42 @@
+.main-content {
+  padding: 3rem 2rem;
+  animation: mainContentAnimation 1.5s var(--generalDelatyAnimation) ease-in-out forwards;
+}
+
+@keyframes mainContentAnimation {
+  0%{
+    transform: translateX(-1000px);
+    opacity: 0.5;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.main-content span {
+  display: block;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-left: 1.5rem;
+  margin-bottom: -0.8rem;
+}
+
+.main-content h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.main-content p {
+  margin-top: 1.6rem;
+  font-weight: 100;
+  color: var(--gray);
+  width: 60%;
+}
+
+@media only screen and (max-width:1024px) {
+
+  .main-content p {
+    width: 70%;
+  }
+}

@@ -1,0 +1,46 @@
+/* .page, .container {
+  width: 100%;
+  height: 100vh;
+} */
+
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 20% 50% 30%;
+  grid-template-areas: "navbar aside"
+                       "main   aside"
+                       "footer aside"
+  ;
+}
+
+.navbar {
+  grid-area: navbar;
+  /* background: red; */
+}
+
+.main-content {
+  grid-area: main;
+  /* background: blue; */
+}
+
+.aside-content {
+  grid-area: aside;
+  /* background: yellow; */
+}
+.footer {
+  grid-area: footer;
+  /* background: orange; */
+}
+
+@media only screen and (max-width:1024px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "navbar"
+                         "main  "
+                         "aside"
+                         "footer"
+    ;
+    row-gap: 2rem;
+  }
+}

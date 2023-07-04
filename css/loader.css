@@ -1,0 +1,73 @@
+/* configuraciones del LOADER */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  z-index: 10;
+  column-gap: 1rem;
+  visibility: hidden;
+  animation: showLoader var(--loaderAnimationTime) linear forwards;
+}
+
+@keyframes showLoader {
+  0%{
+    visibility: visible;
+    opacity: 1;
+  }
+  95%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader span {
+  display: block;
+  background-color: var(--yellow);
+  aspect-ratio: 1;
+  width: 2rem;
+  border-radius: 100%;
+}
+
+.loader span:nth-child(1){
+  animation: dotIntScale 1s ease-in-out infinite;
+}
+
+.loader span:nth-child(2){
+  animation: dotIntScale 1s 0.1s ease-in-out infinite;
+}
+
+.loader span:nth-child(3){
+  animation: dotIntScale 1s 0.2s ease-in-out infinite;
+}
+
+@keyframes dotIntScale {
+  0%{
+    /* background: red; */
+    transform: scale(0.5);
+  }
+  50%{
+    /* background: red; */
+    transform: scale(1);
+  }
+  80%{
+    /* background: red; */
+    transform: scale(1.1);
+  }
+  100%{
+    /* background: red; */
+    transform: scale(0.2);
+  }
+}
+
+/* fin configuraciones del LOADER */

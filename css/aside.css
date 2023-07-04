@@ -1,0 +1,106 @@
+.aside-content {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.aside-content span:nth-child(1){
+  display: block;
+  transform: rotate(270deg);
+  font-size: 2.5rem;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  font-weight: 600;
+  animation-name: asideTextAnimation;
+  animation-duration: 500ms;
+  animation-delay: calc(var(--generalDelatyAnimation) + 0.7s);
+  animation-fill-mode: forwards;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes asideTextAnimation {
+  0%{
+    transform: scale(0.2) rotate(270deg);
+    opacity: 0.2;
+  }
+  100%{
+    transform: scale(1) rotate(270deg);
+    opacity: 1;
+  }
+}
+
+.aside-content img {
+  display: block;
+  width: 120%;
+  min-width: 250px;
+  grid-row: 1/2;
+  grid-column: 2/6;
+  position: relative;
+  z-index: 1;
+  margin: 2rem auto;
+  opacity: 0;
+  rotate: 20deg;
+
+  animation: heroWelcome 3s calc(var(--generalDelatyAnimation) + 0.6s) ease-in-out forwards;
+}
+
+
+@keyframes heroWelcome {
+  0%{
+    transform: translateY(400px) scale(0.5) translateX(350px);
+    opacity: 1;
+  }
+  40%{
+    opacity: 1;
+    transform: translateY(0) scale(1) translateX(0);
+  }
+  65%{
+    opacity: 1;
+    transform: translateY(0) scale(1) translateX(0);
+    filter: drop-shadow(0 0 2rem var(--blue-light));
+  }
+  50%, 100%{
+    opacity: 1;
+    transform: translateY(0) scale(1) translateX(0);
+    filter: drop-shadow(0 0 0.5rem var(--blue-light));
+  }
+}
+
+.aside-content span:nth-of-type(2){
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--yellow);
+  grid-row: 1/2;
+  grid-column: 4/7;
+}
+
+.aside-content .img-absolute {
+  display: block;
+  position: absolute;
+  /* top: -1rem; */
+  transform: rotate(180deg) translateX(5rem) !important;
+  z-index: 0;
+
+
+  animation-name: tunderAnimation;
+  animation-delay: calc(var(--generalDelatyAnimation) + 2s);
+  animation-timing-function: 6s;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes tunderAnimation {
+  0%,20%,60%{
+    filter: drop-shadow(0 0 0.4rem var(--blue-light));
+    opacity: 0.6;
+  }
+  10%,50%,100%{
+    filter: drop-shadow(0 0 1rem var(--blue-light));
+    opacity: 1;
+  }
+}

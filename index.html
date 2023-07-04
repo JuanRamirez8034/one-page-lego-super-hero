@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/main-content.css">
+  <link rel="stylesheet" href="css/aside.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <script src="js/modal.js" defer></script>
+  <title>Super Hero</title>
+</head>
+<body>
+  <div class="page">
+    <!-- main content -->
+    <section class="container">
+      <!-- barra navegación -->
+      <nav class="navbar">
+        <div class="navbar__content">
+          <!-- brand image -->
+          <img src="img/lego.png" alt="logo">
+          <ul>
+            <li><a href="#">EXCLUSIVOS</a></li>
+            <li><a href="#">NUEVOS</a></li>
+            <li><a href="#">GIFT CARDS</a></li>
+            <li><a href="#">FIND A STORE</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- main section -->
+      <section class="main-content">
+        <span>Diseña tu</span>
+        <h1>Super Héroe!</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, cumque alias dolorum 
+          porro expedita placeat eveniet quod ullam! Ullam debitis facilis doloribus, maiores 
+          ex rerum hic excepturi nisi provident aperiam.
+        </p>
+      </section>
+
+      <!-- aside -->
+      <aside class="aside-content">
+        <span>Thor</span>
+        <img src="img/thor.png" alt="">
+        <span></span>
+        <img src="img/thunder.png" alt="img span" class="img-absolute">
+      </aside>
+
+      <!-- footer section -->
+      <section class="footer">
+        <div><img src="img/iroman.png" alt="batman"></div>
+        <div><img src="img/capitan.png" alt="robin"></div>
+        <div><img src="img/spiderman.png" alt="spiderman"></div>
+      </section>
+
+    </section>
+
+    <!-- loader -->
+    <section class="loader">
+      <span></span><span></span><span></span>
+    </section>
+
+    <!-- modal -->
+    <secion class="modal modal-hide">
+      <div class="modal__content">
+
+        <img src="img/cruz.png" alt="close ico" class="close">
+        
+        <div class="modal-slider">
+
+          <input type="radio" name="slider" id="radio-1" checked>
+          <input type="radio" name="slider" id="radio-2">
+          <input type="radio" name="slider" id="radio-3">
+
+          <div class="cards-slider">
+
+            <label for="radio-1" id="card-1" class="card">
+              <img src="img/iroman.png" alt="batman">
+            </label>
+
+            <label for="radio-2" id="card-2" class="card">
+              <img src="img/capitan.png" alt="robin">
+            </label>
+
+            <label for="radio-3" id="card-3" class="card">
+              <img src="img/spiderman.png" alt="spiderman">
+            </label>
+
+          </div>
+
+          <button type="button" class="button">Lo quiero!</button>
+
+        </div>
+
+      </div>
+    </secion>
+  </div>
+</body>
+</html>
